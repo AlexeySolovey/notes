@@ -1,0 +1,75 @@
+*******
+FRONT
+*******
+***css ***
+
+other(currentcolor, current color)
+
+*** Angular ***
+component - component structure
+cli - skip tests; angular.json
+directive - директивы, ElementRef, Renderer2, HostListener и HostBinding, viewContainer, TemplateRef
+dynamic component
+forms - templete drive, reactive form, FormControl, FormGroup, setValue & valueChanges & reset
+http - errors; post,get,delete,put; interceptor;
+ngModel - input (checkbox, radio, text, select), input(), output()
+others - port, keys (shift, alt, cntr), structure (constants, models, export & import), set & get, types
+routing - маршрутизация
+mocks - json
+guards (guards, resolver, interseptor)
+
+*** angular/tasks*** 
+between two components - между двумя компонентами
+
+*** angular/rsjs ***
+observable - отписка
+subject
+operators - catchError
+
+****angular/material***
+checkbox
+
+*** TS ****
+types - generic
+
+*** JS ****
+catch error
+classes
+hooks - count time on procces, highload procces, transform input Value, click outsite element (клик вне элемента), browsers event, select text
+files
+inputs - валидация телефона
+regular expresions
+number - parceInt, formated number (spaces)
+promise
+
+***other***
+http query - xmlHttpRequest, fetch, jquery, ajax, axios
+fake server, mock data - json, fake server, github, node.js, php
+
+*******
+BackEnd
+*******
+***node***
+create server - nodejs, express
+main structure (подключение модулей)
+
+
+*******
+TESTING
+*******
+angular-testing testbed, protrector
+
+*******
+Концепции
+*******
+graphQl
+rest
+
+*******
+Practice
+*******
+
+simple-html (interseptor)
+resolver
+
+

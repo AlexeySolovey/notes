@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>ViewBox</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="../viewbox.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<style>
+		pre.prettyprint.prettyprinted{
+			padding: 10px 20px;
+			border: 1px solid #ccc;
+			margin:0 0 40px;
+		}
+		dl{
+			display: block;
+			margin: 5px 0 20px;
+			overflow: hidden;
+		}
+		dl > dt{
+			display: block;
+			clear:left;
+			float:left;
+			min-width: 160px;
+		}
+		dl > dd{
+			display: block;
+			float:left;
+			margin: 0 0 20px 10px;
+		}
+	</style>
+</head>
+<body>
+	<header class="jumbotron">
+		<div class="container">
+			<h1><i class="far fa-images"></i> ViewBox Demo</h1>
+			<p>Viewbox is a jQuery plugin for displaying images and other HTML content. &nbsp; <a href="https://github.com/pgooood/viewbox" target="_blank"><i class="fab fa-github"></i> Download on GitHub</a></p>
+		</div>
+	</header>
+	<main class="container">
+			<div class="row mb-4">
+				<div class="col-6 col-md-3">
+					<a href="images/i1.jpg" class="thumbnail" title="San Francisco">
+						<img src="images/i1-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i2.jpg" class="thumbnail" title="Rotterdam">
+						<img src="images/i2-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i3.jpg" class="thumbnail" data-viewbox-title="&lt;a href=&quot;https://www.nycgo.com/&quot;&gt;New York&lt;/a&gt;">
+						<img src="images/i3-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-6 col-md-3">
+					<a href="images/i4.jpg" class="thumbnail" title="Istanbul">
+						<img src="images/i4-thumb.jpg" alt="" class="img-fluid">
+					</a>
+				</div>
+			</div>
+			<p><a href="images/i5.jpg" class="thumbnail-2">
+				<img src="images/i5-thumb.jpg" alt="" class="img-fluid">
+			</a></p>
+			<p>&nbsp;</p>
+			
+			
+			<p>Or apply <code>viewbox()</code> method to a content element.</p>
+
+			<h3>Demo</h3>
+			<p><a href="#popup" class="popup-link"><i class="fas fa-info-circle"></i> Open popup window</a></p>
+			<p><button type="button" class="btn btn-default popup-open-button">Open popup window</button></p>
+			<p>&nbsp;</p>
+			
+			<h2>Options</h2>
+			<p>These options are default.</p>
+
+			
+			<h2>Custom events</h2>
+			<p>There are some of custom events you can use to control Viewbox. To trigger these custom events, simply target the object created by the plugin.</p>
+
+	</main>
+	<footer class="footer bg-light py-4">
+		<div class="container">
+			<span class="text-muted">© 2018 Pavel Khoroshkov &nbsp; <a href="http://pgood.space/">pgood.space</a></span>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<script src="jquery.viewbox.min.js"></script>
+	<script>
+		$(function(){
+			
+			$('.thumbnail').viewbox();
+			$('.thumbnail-2').viewbox({fullscreenButton: true});
+
+			(function(){
+				var vb = $('.popup-link').viewbox();
+				$('.popup-open-button').click(function(){
+					vb.trigger('viewbox.open');
+				});
+				$('.close-button').click(function(){
+					vb.trigger('viewbox.close');
+				});
+			})();
+			
+		});
+	</script>
+</body>
+</html>

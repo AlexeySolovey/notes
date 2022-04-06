@@ -1,0 +1,46 @@
+1. ?	Cloud-based application  ( ? need to read about that)
+2. ok	Web-based (+)
+3. ok	Accessible both on mobile and desktop devices, multi-platform (+) 
+4. +	Accessible in the US or other geographic locations (+, languages?)
+5. ?	Data centric application  ( ? need tot read about that )
+a. ?	Increased requirements for data storage and access 
+b. ?	We will need components that transform / interpret data on large scale
+6. BE	Work with both structured and non-structured information ( ? need tot read about that )
+a. BE	Both SQL and NoSQL DBMS will be needed
+b. BE	Smth. like ElasticSearch for non-structured info
+7. ?	Federated(?) authentication ( ? need tot read about that )
+8. - BE	Many integrations over unknown yet protocols and channels (don't know answer)
+a. - BE	Synchronous and asynchronous 
+b. - BE	File-based and API-based
+9. ?	AI components and integrations (?)
+a. ok	Big computational power / scalability (ok)
+10.- BE	High-load application – thousands of users (don't know unswer)
+11.ok	Standards support (ok)
+a. ok	OneRoster 
+b. ok	Scorm
+c. ok	hropenstandards
+12. ?	Main entitiesTBD (?)
+13.+	Tech stack (angular + NgRx -> TS + ES6 -> TSLint, CssLint, Prettior) 
+a. +	TBD
+14.Dev	Deployment
+a. Dev	CI/CD
+b. Dev	Dev - Test – UAT - Stage – Prod
+c. Dev	Source control
+d. Dev	Test automation 
+e. Dev	TBD
+15.leg	Legal requirements
+a. leg	Data encryption / obfuscation 
+b. leg	Data location / GDPR
+c. leg	Other regulations in EDU / labor market fields ?
+d. leg	Different requirements by states ?
+16.men	Payment system and credit card processing
+a. men	Integration with external payment system or win components
+b. men	Integration with bank systems?
+17.men 	Integration with online educations providers
+18.+	Security framework (пермишины, tokens, abstractions, Row-Level Security)
+a.	Roles, permissions, RLS
+b.	 
+19.dev	VPN / proxy access to corporate / university on-premise systems 
+20.dev	Batch job / worker component for regular integrations
+21.?	Video hosting / recording capabilities – will need corresponding infra and components.
+22.+	Rich analytical and graphical capabilities / data mining (d3.js)

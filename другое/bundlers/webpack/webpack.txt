@@ -1,0 +1,63 @@
+https://webpack.js.org/guides/getting-started/#basic-setup
+
+
+***Инициализация***
+1) должен быть проект
+2) в проекте создаем package.json (npm init)
+3) установка webpack webpack-cli (npm install webpack webpack-cli --save-dev)
+4) добавить в package.json script ("build": "webpack")
+5) проверить, что файл js лежить в папке src
+6) команда в консоле - npm run build
+7) подключаем сгенерированный файл (./dist/main.js)
+
+***Настройка****
+1) в проекте на уровне package.json создаем файл webpack.config.js
+2) вставляем конфигурацию:
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+
+3) выбираем mode (development, production)
+
+****Генерация html файла****
+1) npm install --save-dev html-webpack-plugin
+2) добавить в plagins: (plugins: [new HtmlWebpackPlugin()], )
+3) импортировать плагин с node_module (const HtmlWebpackPlugin = require('html-webpack-plugin');)
+4) команда в консоле - npm run build
+
+5) можно указать template (template: path.resolve(__dirname, "./index.html"));
+
+*** фишки ***
+webpack --watch - следит за изменениями в файлах
+clean: true  - чистит dist заливает новые файлы
+
+***webpack dev server***
+1) npm install webpack-dev-server --save-dev
+2) добавляем скрипт ( "dev": "webpack serve --open")
+3) команда в консоле - npm run dev
+
+
+***прокидывание переменных в конфигурацию***
+1) с конфигурации сделать функцию которая возращает обьект, в качестве аргумента она принемает "env"
+2) внутри функции создать переменные
+  const MODE = env.mode;
+  const IS_DEV = MODE === "development";
+  const IS_PROD = !IS_DEV;
+3) теперь можем проставлять условия
+  devtool: IS_DEV ? "evel-source-map" : "source-map",
+  optimization: {
+    minimize: IS_PROD,
+  },
+4) в package json прокидываем значение переменной env ("webpack --env mode=development")
+
+
+
+
+
